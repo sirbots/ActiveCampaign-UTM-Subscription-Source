@@ -37,12 +37,12 @@ setCookie();
 $(document).ready(function () {
 
 
-jQuery.fn.fillForm = function () {
+
   var cookie_val = $.cookie("name");
   $('input[name=field[30]]').val(cookie_val);
-}
 
-$.fillForm();
+
+
 });
 
 /*
