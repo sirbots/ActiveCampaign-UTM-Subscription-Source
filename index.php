@@ -2,7 +2,7 @@
 
     <head>
     <script type="text/javascript" src="setcookie.js"></script>
-    <script type="text/javascript" src="jquery-3.2.1.min"></script>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     </head>
 
     <body>
