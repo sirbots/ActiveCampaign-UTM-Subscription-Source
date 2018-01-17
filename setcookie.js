@@ -35,7 +35,7 @@ setCookie();
 
 
 // Feed the UTM data from the cookie into the hidden form fields
-$.fn.fillForm = function () {
+jQuery.fn.fillForm = function () {
   var cookie_val = $.cookie("name");
   $('input[name=field[30]]').val(cookie_val);
 }
