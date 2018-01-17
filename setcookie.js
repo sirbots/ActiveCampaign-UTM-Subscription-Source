@@ -25,14 +25,36 @@ function setCookie() {
   var expirationDate = new Date();
   expirationDate.setMonth(expirationDate.getMonth() + 1);
   expirationString = expirationDate.toUTCString;
-
   document.cookie = "UTMparams=" + medium + "/" + source + "/" + campaign + "/" + content + "/" + term + ";expires=" + expirationString + ";path=/;"
-  console.log("UTMparams=" + medium + "/" + source + "/" + campaign + "/" + content + "/" + term );
+  
 }
+
 
 setCookie();
 
 
+
+// Feed the UTM data from the cookie into the hidden form fields
+function fillForm() {
+  var cookie_val = $.cookie("name");
+  $('input[name=field[30]]').val(cookie_val);
+}
+
+fillForm();
+
+
+/*
+<div class="_form_element _field30 _full_width " >
+      <input type="hidden" name="field[30]" value="" />
+    </div>
+    <div class="_form_element _field31 _full_width " >
+      <input type="hidden" name="field[31]" value="" />
+    </div>
+    <div class="_form_element _field32 _full_width " >
+      <input type="hidden" name="field[32]" value="" />
+    </div>
+
+*/
   //  When you are creating a cookie, you can set six parts: 
   //  name, value, expires, path, domain, and secure.
 
