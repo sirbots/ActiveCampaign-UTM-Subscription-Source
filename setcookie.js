@@ -27,7 +27,7 @@ function setCookie() {
   expirationString = expirationDate.toUTCString;
 
   document.cookie = "UTMparams=" + medium + "/" + source + "/" + campaign + "/" + content + "/" + term + ";expires=" + expirationString + ";path=/;"
-
+  console.log("UTMparams=" + medium + "/" + source + "/" + campaign + "/" + content + "/" + term );
 }
 
 setCookie();
