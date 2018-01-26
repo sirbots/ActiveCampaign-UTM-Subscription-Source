@@ -65,16 +65,16 @@ var utmArray = [];
 getUTMcookie();
 
 // jQuery inserts the cookie data into the form fields
-$( document ).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
 
   /*******************************************************************
    * 1: Be sure to update the field numbers below to match your form!
    * 2: Run a test to make sure data is populating correctly in AC.
    ******************************************************************/
 
-  $('input[name="field[30]"').attr("value", utmArray[0]); // utm_medium
-  $('input[name="field[31]"').attr("value", utmArray[1]); // utm_source
-  $('input[name="field[32]"').attr("value", utmArray[2]); // utm_campaign
-  $('input[name="field[33]"').attr("value", utmArray[3]); // utm_content
-  $('input[name="field[34]"').attr("value", utmArray[4]); // utm_term
+  document.querySelectorAll('input[name="field[30]"')[0].setAttribute("value", utmArray[0]); // utm_medium
+  document.querySelectorAll('input[name="field[31]"')[0].setAttribute("value", utmArray[1]); // utm_source
+  document.querySelectorAll('input[name="field[32]"')[0].setAttribute("value", utmArray[2]); // utm_campaign
+  document.querySelectorAll('input[name="field[33]"')[0].setAttribute("value", utmArray[3]); // utm_content
+  document.querySelectorAll('input[name="field[34]"')[0].setAttribute("value", utmArray[4]); // utm_term
 });

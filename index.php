@@ -1,6 +1,5 @@
 <html>
     <head>
-      <script type="application/javascript" src="jquery-3.2.1.min.js"></script>
       <script type="application/javascript" src="ac-cookie.js"></script>
     </head>
 
