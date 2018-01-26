@@ -1,5 +1,7 @@
 
-# Readme
+# Synopsis
+
+Version 0.1
 
 This is a simple JavaScript plugin for ActiveCampaign users that want to see the traffic source (UTM parameters) that were used when a contact subscribed to their list. 
 
@@ -42,3 +44,7 @@ Visit a few pages, then subscribe to your list with a test email. Check the new 
 
 * Solution for referral and organic traffc.
 * Support for initial visit UTMs in addition to subscribe event session UTMs.
+
+## License
+
+Distributed under the MIT license.
