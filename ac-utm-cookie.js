@@ -3,7 +3,7 @@
  * 
  * Description: Creates a cookie with a visitor's UTM parameters, then inserts those parameters into a custom field for ActiveCampaign users.
  * Use: Distributed under the MIT License.
- * Creator: sirbots (https://github.com/sirbots) @ http://makemorecoffee.com
+ * Creator: sirbots (https://github.com/sirbots) @ https://makemorecoffee.com
  * 
  *********/
 
