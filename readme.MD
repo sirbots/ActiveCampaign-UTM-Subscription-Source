@@ -1,11 +1,17 @@
 
 # Synopsis
 
-Version 0.2
+Version 0.3
 
 This is a simple JavaScript plugin for [ActiveCampaign](https://www.activecampaign.com/) users that want to see the traffic source (UTM parameters) that were used when a contact subscribed to their list. 
 
 The UTM parameters are stored in a cookie when the visitor first arrives at the site. Then, hidden fields in the ActiveCampaign form are populated with the UTM values. When the form is submitted, those values are sent to ActiveCampaign and stored in custom fields.
+
+If no UTM parameters are included in the URL, then the script will consider referrals from Google, Yahoo, Bing, DuckDuckGo, or Baidu as organic traffic. 
+
+Referrals from other domains will be counted as normal referral traffic and the source will be set to wherever the visitor came from. 
+
+Direct traffic will default all UTM values to `none`.
 
 ## Installation and Setup
 
@@ -39,7 +45,6 @@ Visit a few pages, then subscribe to your list with a test email. Check the new 
 
 ## Future Updates
 
-* Solution for referral and organic traffc.
 * Support for initial visit UTMs in addition to subscribe event session UTMs.
 
 ## License

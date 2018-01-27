@@ -7,21 +7,64 @@
  * 
  *********/
 
+var cookieNames = document.cookie.split(';');
+var cookieSet = false;
+
+for (i=0 ; i < cookieNames.length ; i++) {
+  if ( cookieNames[i].substring(0,10) == ' UTMparams' || cookieNames[i].substring(0,9) == 'UTMparams') {
+  cookieSet = true;
+    }  
+  }
 
 // Check for utms in the query string
-if (window.location.search.substring(1).search("utm") > -1 ) {
+if (!cookieSet) {
+  if (window.location.search.substring(1).search("utm") > -1 ) {
 
-  // Store the parsed UTM parameters
-  var medium = getQueryVariable("utm_medium");
-  var source = getQueryVariable("utm_source");
-  var campaign = getQueryVariable("utm_campaign");
-  var content = getQueryVariable("utm_content");
-  var term = getQueryVariable("utm_term");
+    // Store the parsed UTM parameters
+    var medium = getQueryVariable("utm_medium");
+    var source = getQueryVariable("utm_source");
+    var campaign = getQueryVariable("utm_campaign");
+    var content = getQueryVariable("utm_content");
+    var term = getQueryVariable("utm_term");
+
+    // Bake the cookie
+    setCookie();
+
+} else {
+
+    // Handling for non-UTM traffic
+    var referringDomain = (document.referrer == "") ? 'none' : document.referrer.split("/")[2];
+
+    var medium = 'direct';
+    var source = 'none';
+    var campaign = 'none';
+    var content = 'none';
+    var term = 'none';
+
+    if (referringDomain.indexOf('google') > -1) {
+      var medium = 'organic';
+      var source = 'google';
+    } else if (referringDomain.indexOf('yahoo') > -1) {
+      var medium = 'organic';
+      var source = 'yahoo';
+    } else if (referringDomain.indexOf('bing') > -1) {
+      var medium = 'organic';
+      var source = 'bing';
+    } else if (referringDomain.indexOf('duckduckgo') > -1) {
+      var medium = 'organic';
+      var source = 'duckduckgo';
+    } else if (referringDomain.indexOf('baidu') > -1) {
+      var medium = 'organic';
+      var source = 'baidu';
+    } else if (!referringDomain.indexOf('') == 0) {
+      var medium = 'referral';
+      var source = 'referringDomain';
+    }
   
-  // Bake the cookie
-  setCookie();
-
-} 
+    // Bake the cookie
+    setCookie();
+  }
+}
 
 // Parse the UTM parameters in the query string
 function getQueryVariable(variable) {
@@ -38,10 +81,7 @@ function getQueryVariable(variable) {
 
 // Bake the cookie
 function setCookie() {
-  var expirationDate = new Date();
-  expirationDate.setMonth(expirationDate.getMonth() + 1);
-  expirationString = expirationDate.toUTCString;
-  document.cookie = "UTMparams=" + medium + "/" + source + "/" + campaign + "/" + content + "/" + term + ";expires=" + expirationString + ";path=/;"
+  document.cookie = "UTMparams=" + medium + "/" + source + "/" + campaign + "/" + content + "/" + term + ";path=/;"
 }
 
 // Find the UTM cookie and parse it
@@ -64,7 +104,7 @@ function getUTMcookie() {
 var utmArray = [];
 getUTMcookie();
 
-// jQuery inserts the cookie data into the form fields
+// Insert the cookie data into the form fields
 document.addEventListener("DOMContentLoaded", function() {
 
   /*******************************************************************
