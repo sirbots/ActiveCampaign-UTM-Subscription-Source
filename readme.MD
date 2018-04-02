@@ -3,7 +3,7 @@
 
 Version 0.3
 
-This is a simple JavaScript plugin for [ActiveCampaign](https://www.activecampaign.com/) users that want to see the traffic source (UTM parameters) that were used when a contact subscribed to their list. 
+This is a simple JavaScript plugin for [ActiveCampaign](https://www.activecampaign.com/?_r=LM8RMH2L) users that want to see the traffic source (UTM parameters) that were used when a contact subscribed to their list. 
 
 The UTM parameters are stored in a cookie when the visitor first arrives at the site. Then, hidden fields in the ActiveCampaign form are populated with the UTM values. When the form is submitted, those values are sent to ActiveCampaign and stored in custom fields.
 
