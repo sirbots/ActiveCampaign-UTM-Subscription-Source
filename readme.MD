@@ -36,9 +36,6 @@ To track the UTMs:
 
 4. Upload the ac-utm-cookie.js and/or ac-initial-lp.js files to your server and add it betwween the `<head>` tags of your site: `<script type="text/javascript" src="/ac-utm-cookie.js"></script>`
 
-*NB:* The scripts are separated for the two different use cases but you can combine them if you want (requires a bit of JS noodling).
-
-
 ## Testing
 
 Test it out by visiting your site with test UTM parameters (example.com/?utm_source=test-source&utm_medium=test-medium&utm_term=the-term&utm_content=some-content&utm_campaign=the_big_campaign). 
@@ -47,6 +44,7 @@ Visit a few pages, then subscribe to your list with a test email. Check the new 
 
 ## Help with implementation
 
+* The scripts are separated for the two different use cases but you can combine them if you want (requires a bit of JS noodling).
 * If you're using SquareSpace, you can uncomment the `mercury:load` line at the top. This will force SquareSpace to load the script on every page load.
 * Want help or a custom implementation? You can contact me via my website (listed on my [GitHub profile page](https://github.com/sirbots).)
 
