@@ -47,6 +47,7 @@ Visit a few pages, then subscribe to your list with a test email. Check the new 
 
 ## Help with implementation
 
+* If you're using SquareSpace, you can uncomment the `mercury:load` line at the top. This will force SquareSpace to load the script on every page load.
 * Want help or a custom implementation? You can contact me via my website (listed on my [GitHub profile page](https://github.com/sirbots).)
 
 ## License
