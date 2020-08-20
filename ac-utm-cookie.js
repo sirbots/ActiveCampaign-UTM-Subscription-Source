@@ -1,10 +1,8 @@
 
 /*********
-* 
-* Description: Creates a cookie with a visitor's UTM parameters, then inserts those parameters into a custom field for ActiveCampaign users.
-* Use: Distributed under the MIT License.
-* Creator: sirbots (https://github.com/sirbots)
-* 
+  * Description: Creates a cookie with a visitor's UTM parameters, then inserts those parameters into a custom field for ActiveCampaign users.
+  * Use: Distributed under the MIT License.
+  * Creator: sirbots (https://github.com/sirbots)
 *********/
 
 document.addEventListener('DOMContentLoaded',UTMcookie());

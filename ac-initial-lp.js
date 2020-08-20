@@ -1,5 +1,7 @@
+
 /*********
  * Description: Creates a cookie with a visitor's initial landing page, then inserts the initial LP into a custom field for ActiveCampaign users.
+ * Use: Distributed under the MIT License.
  * Creator: sirbots (https://github.com/sirbots)
  *********/
 
